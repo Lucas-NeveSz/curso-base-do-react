@@ -1,18 +1,43 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+
+export function App() {
+  
 
   return (
     <>
-      <p>Hello Word</p>
-
-      <button onClick={() => setCount(count + 1)}>
-        Count {count}
-      </button>
+     Olá
     </>
   )
 }
 
-export default App
+//Função JS
+const teste = () => {
+  return 1 + 1;
+}
+
+//Função JS
+const useTeste = () => {
+  return 1 + 1;
+}
+
+//React hook
+const useTest = () => {
+  const [value] = useState(1 + 1);
+
+  return value;
+}
+
+//Função JS que retorna html react
+const tests = () => {
+  return (
+    <div>Teste</div>
+  )
+}
+
+//Componente Funcional
+const Tests = () => {
+  return (
+    <div>Teste</div>
+  )
+}
