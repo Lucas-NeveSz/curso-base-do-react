@@ -1,43 +1,54 @@
 import { useState } from "react";
 
 
+
+interface ICardProps {
+  title: string;
+  children: React.ReactNode;
+}
+const Card = (props: ICardProps) => {
+  return(
+    <div style={{ border: '1px solid black' }}>
+      <span>Title {props.title}</span>
+
+      <div>
+        {props.children}
+      </div>
+      
+      <div>
+        Fouter
+      </div>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
 export function App() {
   
 
   return (
-    <>
-     Olá
-    </>
+    <div>
+      Olá
+
+      <p>Card!</p>
+
+      <Card title="Teste">
+        Testando
+        Testando
+        Testando
+        Testando
+        Testando
+        Testando
+      </Card>
+    </div>
   )
 }
 
-//Função JS
-const teste = () => {
-  return 1 + 1;
-}
-
-//Função JS
-const useTeste = () => {
-  return 1 + 1;
-}
-
-//React hook
-const useTest = () => {
-  const [value] = useState(1 + 1);
-
-  return value;
-}
-
-//Função JS que retorna html react
-const tests = () => {
-  return (
-    <div>Teste</div>
-  )
-}
-
-//Componente Funcional
-const Tests = () => {
-  return (
-    <div>Teste</div>
-  )
-}
