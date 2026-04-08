@@ -1,53 +1,30 @@
 import { useState } from "react";
 
 
-
-interface ICardProps {
-  title: string;
-  children: React.ReactNode;
-}
-const Card = (props: ICardProps) => {
-  return(
-    <div style={{ border: '1px solid black' }}>
-      <span>Title {props.title}</span>
-
-      <div>
-        {props.children}
-      </div>
-      
-      <div>
-        Fouter
-      </div>
-    </div>
-  );
-}
-
-
-
-
-
-
-
-
-
-
 export function App() {
-  
+  const [count, setCount] = useState(0);
+  const [hide, setHide] = useState(false);
+
+  //if(hide) return null
 
   return (
     <div>
-      Olá
 
-      <p>Card!</p>
+      {hide && <p>Teste 1</p>}
+      {!hide && <p>Teste 2</p>}
 
-      <Card title="Teste">
-        Testando
-        Testando
-        Testando
-        Testando
-        Testando
-        Testando
-      </Card>
+      {hide
+        ? <p>Teste 1</p>
+        : <p>Teste 2</p>
+      }
+
+      <button onClick={() => setCount(count + 1)}>
+        {count}
+      </button>
+
+      <button onClick={() => setHide(!hide)}>
+        Toggle
+      </button>
     </div>
   )
 }
